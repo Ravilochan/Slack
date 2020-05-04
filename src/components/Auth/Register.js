@@ -106,7 +106,7 @@ handleSubmit=event=>{
 			<Grid textAlign="center" verticalAlign="middle" className="app">
 			<Grid.Column style={{ maxWidth:450}}>
 			<Header as='h1' icon color="orange" textAlign="center">
-			<Icon name="puzzle piece" color="blue" />
+			<Icon name="puzzle piece" color="orange" />
 			Register Pass
 			</Header>
 			<Form onSubmit={this.handleSubmit} size="large">
