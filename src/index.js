@@ -20,10 +20,15 @@ const Root=()=>(
 	</Switch>
 	</Router>
 );
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Root />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
 ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
+    <Root />,
   document.getElementById('root')
 );
 
