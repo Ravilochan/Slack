@@ -2,33 +2,46 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import firebase from './firebase';
 
 import App from './components/App';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 
-import { BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import { BrowserRouter as Router,Switch,Route,withRouter} from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css';
 
-const Root=()=>(
-	<Router>
+class Root extends React.Component{
+	componentDidMount(){
+	firebase.auth().onAuthStateChanged(user=>{
+		if(user){
+			this.props.history.push('/');
+		}
+	})
+}
+	render(){
+	return (
 	<Switch>
-	
 	<Route path="/login" component={Login} />
 	<Route path="/register" component={Register} />
 	<Route path="/" component={App} />
-	</Switch>
-	</Router>
+	</Switch>	
 );
+}}
+
+const RootWithAuth=withRouter(Root);
+
+
+
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <Root />
 //   </React.StrictMode>,
 //   document.getElementById('root')
 // );
-
 ReactDOM.render(
-    <Root />,
+	<Router>
+    <RootWithAuth /></Router>,
   document.getElementById('root')
 );
 
