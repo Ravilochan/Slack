@@ -12,7 +12,7 @@ class UserPanel extends Component {
       text: (
         <span>
           {" "}
-          Signed In as <strong>{this.state.user.displayName}</strong>
+          Signed as <strong>{this.state.user.displayName}</strong>
         </span>
       ),
       disabled: true,
@@ -41,7 +41,12 @@ class UserPanel extends Component {
       <Grid style={{ background: "#4c3c4c" }}>
         <Grid.Column>
           <Grid.Row style={{ padding: "1.2rem", margin: 0 }}>
-            <Header inverted floated="left" as="h2">
+            <Header
+              inverted
+              floated="left"
+              as="h2"
+              style={{ paddingBottom: "0.7em" }}
+            >
               <Icon name="code" />
               <Header.Content>Dev Chat</Header.Content>
             </Header>

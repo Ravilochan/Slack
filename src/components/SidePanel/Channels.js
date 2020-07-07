@@ -71,7 +71,7 @@ class Channels extends Component {
           key={channel.id}
           onClick={() => console.log(channel)}
           name={channel.name}
-          //   style={{ opacity: 0.7 }}
+          style={{ opacity: 0.7 }}
         >
           #{channel.name}
         </Menu.Item>
