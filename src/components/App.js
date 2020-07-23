@@ -12,7 +12,7 @@ const App = ({ currentUser, currentChannel }) => (
     <ColorPanel />
     <SidePanel key={currentUser && currentUser.uid} currentUser={currentUser} />
 
-    <Grid.Column style={{ marginLeft: 320 }}>
+    <Grid.Column style={{ marginLeft: 310, marginBottom: 0 }}>
       <Messages
         key={currentChannel && currentChannel.id}
         currentChannel={currentChannel}

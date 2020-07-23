@@ -20,3 +20,24 @@ body,
   right: 1em;
   z-index: 200;
 }
+
+.message_self {
+  border-left: 2px solid orange;
+  padding-left: 8px;
+}
+.message_other {
+  border-left: 2px solid blue;
+  padding-left: 8px;
+}
+
+.message_image {
+  padding: 1em 0.5em 0.5em 0em;
+}
+
+.progress_bar {
+  margin: 0.3em 0 0 !important;
+}
+
+.menu {
+  padding-bottom: 2em;
+}
