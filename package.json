@@ -9,7 +9,7 @@
     "firebase": "^7.14.2",
     "md5": "^2.2.1",
     "mime-types": "^2.1.27",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
